@@ -1,0 +1,177 @@
+#main-header {
+	background: #333;
+	color: white;
+	height: 50px;
+}	
+	#main-header a {
+		color: white;
+	}
+
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #0b76a6;
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+	
+
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 50px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #0b76a6;
+				}
+
+
+body {
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.mat-card {
+    border-radius: 32 px;
+    margin: 10 px 10 px;
+    padding: 20 px;
+    border-color: #00FFFF;
+    
+}
+.mat-card#first-card {
+        padding: 0;
+        
+}
+div#profile-background {
+    display:grid;
+    z-index: 1;
+}
+div#profile-background img {
+    width:auto;
+    border-radius: 32 px 32 px 0 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 152 px;
+    height: auto;
+    margin-top: -110 px;
+
+}
+
+
+div#info-actions {
+    display: inline-flex;
+}
+div#info-actions button {
+    margin-right: 8 px;
+}
+div#info-contact span {
+    font-size: 1 rem;
+    font-weight: 400;
+}
+div#info-contact span a {
+    color:aqua;
+    touch-action: manipulation;
+    text-decoration:none;
+
+}
+
+.contenedor {
+    display: flex;
+}
+div#info-data h1 {
+    font-size:1.8 rem;
+    display:flex;
+    font-weight: 500;
+    line-height: 1.25;
+    word-wrap: break-word;
+    word-break: break-word;
+    float:none;
+    
+    
+}
+div#info-data ul#info-details {
+    display: flex;
+    width: 232 px;
+    list-style: none;
+    flex-shrink: 0;
+    
+    
+    
+}
+div#info-data ul#info-details li a h2 {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    vertical-align: baseline;
+    
+}
+div#info-data ul#info-details li a img {
+    display: flex;
+    width: 32 px;
+    height: 32 px;
+    margin-right: 8 px;
+    
+    
+}
+ul.items-list {
+    display: flex;
+    list-style: none inside ;
+    float:left;
+    
+    
+}
+ul.items-list li{
+    display: inline-flex;
+    margin: 10 px 0;
+    
+    
+}
+ul.items-list li div.data-container {
+    flex-grow: 1;
+    
+    
+}
+ul.items-list li div.data-container a {
+    display:inline-flex;
+    color: black;
+    
+    
+}
