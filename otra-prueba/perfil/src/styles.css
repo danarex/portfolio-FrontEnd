@@ -79,21 +79,21 @@ header{
 
 }
 
-/*Perfil*/
+/*Encabezado*/
 
-.info-perfil-logo li{
+.info-encabezado-logo li{
     display:inline-block;
     align-items:center;
     text-align: center;
 }
 
-.info-perfil-logo img{
+.info-encabezado-logo img{
     
     align-items:center;
     
 }
 
-.contenedor-perfil {
+.contenedor-encabezado {
     display:block;
     width:100%;
     justify-content:space-evenly;
@@ -107,13 +107,13 @@ header{
 
 
 
-.info-perfil p{
+.info-encabezado p{
     font-size: medium;
     font-weight: 300;
 
 }
 
-.pencil-perfil i {
+.pencil-encabezado i {
     display:block;
     color:grey;
     float:right;  
@@ -124,7 +124,7 @@ header{
 
 }
 
-.info-contacto{
+.info-contacto-encabezado{
     display: inline-block;
     text-align: center;
     align-items: center;

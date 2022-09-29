@@ -3,15 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EncabezadoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
+  exports:[EncabezadoComponent],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
