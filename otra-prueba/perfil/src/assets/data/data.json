@@ -1,0 +1,41 @@
+{
+	"name": "Daniela Morandin",
+	"backImage": " ",
+	"image": " ",
+	"position": "Data Entry",
+	"company": {
+		"name": "BA Marketing",
+		"img": " ",
+		"url": "#"
+	},
+	"school": {
+		"name": "Argentina Programa",
+		"img": "https://ibb.co/Wp1ypYf",
+		"url": "#"
+	},
+	"ubication": "Buenos Aires, Argentina",
+	"about": "Estudiante Full Stack Jr. en Argentina Programa",
+	"experience": {
+		"position": "Data Entry",
+		"company": "BA Marketing",
+		"img": "https://ibb.co/VVvS4pq",
+		"mode": "part time",
+		"start": "Marzo 20212",
+		"end": "Actualmente trabajo aquí"
+	},
+	"education": {
+		"position": "Estudiante",
+		"company": "Argentina Programa",
+		"img": "https://ibb.co/Wp1ypYf",
+		"career": "Full Stack Jr.",
+		"start": "julio 2021",
+		"end": "actualidad"
+	}
+
+
+
+
+
+
+
+}
