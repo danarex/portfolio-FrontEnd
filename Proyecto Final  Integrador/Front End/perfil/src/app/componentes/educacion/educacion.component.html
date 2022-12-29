@@ -1,0 +1,39 @@
+
+        <div class="contenedor" id="educacion">
+            <div class="contenedor-educacion">
+                <h2 class="subtitulo">Educación</h2>
+                <section class="education">
+                <div class="cont-educacion">
+                    <div class="pencil-acerca-de">
+                        <a href="./" class="pencil-icon">
+                            <i class='bx bxs-edit'></i>
+                        </a></div>
+                    <div class="trash-icon">
+                        <a href="./" class="trash-icon">
+                            <i class='bx bx-trash'></i>
+                        </a>
+                    </div>   
+                    <img [src]="miPortfolio.school.img"  alt="Argentina Programa" class="img-education">
+                    <h3>{{miPortfolio.education.company}}</h3>
+                    <h4>{{miPortfolio.education.career}}</h4>
+                    <p class="copy">Inicio: {{miPortfolio.education.start}}</p>
+                    <p class="copy">Fin: {{miPortfolio.education.end}}</p>
+            </div>
+            <div class="cont-educacion">
+                <div class="pencil-acerca-de">
+                    <a href="./" class="pencil-icon">
+                        <i class='bx bxs-edit'></i>
+                    </a></div>
+                <div class="trash-icon">
+                    <a href="./" class="trash-icon">
+                        <i class='bx bx-trash'></i>
+                    </a>
+                </div>   
+            <img [src]="miPortfolio.education2.img" alt="liceo" class="img-education">
+            <h3>{{miPortfolio.education2.company}}</h3>
+            <h4>{{miPortfolio.education2.career}}</h4>
+            <p class="copy"> Inicio: {{miPortfolio.education2.start}}</p>
+            <p class="copy"> Inicio: {{miPortfolio.education2.end}}</p>
+            </div>    
+        </section>
+    </div>         

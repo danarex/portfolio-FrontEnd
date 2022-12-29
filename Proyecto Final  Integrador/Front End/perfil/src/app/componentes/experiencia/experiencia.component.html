@@ -1,0 +1,38 @@
+<div class="contenedor" id="experiencia">
+    <div class="contenedor-experiencia">
+        <h2 class="subtitulo">Experiencia</h2>
+        <div class="experience">
+        <div class="cont-experiencia">
+            <div class="pencil-acerca-de">
+                <a href="./" class="pencil-icon">
+                    <i class='bx bxs-edit'></i>
+                </a></div>    
+            <div class="trash-icon">
+                <a href="./" class="trash-icon">
+                  <i class='bx bx-trash'></i></a></div>           
+            <img [src]="miPortfolio.experience.img" alt="BAM" class="img-experiencia">
+            <h3>{{miPortfolio.experience.company}}</h3>
+            <h4>{{miPortfolio.experience.position}}</h4>
+    <p class="copy">Tipo de empleo: {{miPortfolio.experience.mode}}</p>
+    <p class="copy">Inicio: {{miPortfolio.experience.start}}</p>
+    <p class="copy">Fin: {{miPortfolio.experience.end}}</p>
+        </div>
+        <div class="cont-experiencia">
+            <div class="pencil-acerca-de">
+                <a href="./" class="pencil-icon">
+                    <i class='bx bxs-edit'></i>
+                </a></div>
+            <div class="trash-icon">
+                <a href="./" class="trash-icon">
+                    <i class='bx bx-trash'></i>
+                </a>
+            </div>   
+            <img [src]="miPortfolio.experience2.img" alt="FB" class="img-experiencia">
+        <h3>{{miPortfolio.experience2.company}}</h3>
+        <h4>{{miPortfolio.experience2.position}}</h4>
+    <p class="copy">Tipo de empleo: {{miPortfolio.experience2.mode}}</p>
+    <p class="copy">Inicio: {{miPortfolio.experience2.start}}</p>
+    <p class="copy">Fin: {{miPortfolio.experience2.end}}</p>
+        </div>
+    </div>
+</div> 
