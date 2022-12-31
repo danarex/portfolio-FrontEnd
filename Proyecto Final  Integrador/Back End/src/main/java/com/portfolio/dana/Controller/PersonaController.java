@@ -5,6 +5,7 @@ import com.portfolio.dana.Entity.Persona;
 import com.portfolio.dana.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@CrossOrigin(origins= "http://localhost:4200")
+@CrossOrigin(origins= "http://localhost:4200")
 public class PersonaController {
     @Autowired IPersonaService  ipersonaService;
     
@@ -42,13 +43,18 @@ public class PersonaController {
     public Persona editPersona(@PathVariable Long id,
                             @RequestParam("nombre") String nuevoNombre,
                             @RequestParam("apellido") String nuevoApellido,
-                            @RequestParam("img") String nuevoImg){
+                            @RequestParam("email") String nuevoEmail,
+                            @RequestParam("img") String nuevoImg,
+                            @RequestParam("sobreMi") String nuevoSobreMi
+    ){
         
     Persona persona = ipersonaService.findPersona(id);
     
     persona.setNombre(nuevoNombre);
     persona.setApellido(nuevoApellido);
+    persona.setEmail(nuevoEmail);
     persona.setImg(nuevoImg);
+   
     
     ipersonaService.savePersona(persona);
     return persona;
