@@ -14,7 +14,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PortfolioService } from './componentes/servicios/portfolio.service';
+import { PortfolioService } from './service/portfolio.service';
 import {HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
