@@ -3,7 +3,7 @@
             <div class="contenedor-educacion">
                 <h2 class="subtitulo">Educación</h2>
                 <section class="education">
-                <div class="cont-educacion">
+                <div class="cont-educacion" *ngFor="let edu of educacion">
                     <div class="pencil-acerca-de">
                         <a href="./" class="pencil-icon">
                             <i class='bx bxs-edit'></i>
@@ -13,13 +13,13 @@
                             <i class='bx bx-trash'></i>
                         </a>
                     </div>   
-                    <img [src]="miPortfolio.school.img"  alt="Argentina Programa" class="img-education">
-                    <h3>{{miPortfolio.education.company}}</h3>
-                    <h4>{{miPortfolio.education.career}}</h4>
-                    <p class="copy">Inicio: {{miPortfolio.education.start}}</p>
-                    <p class="copy">Fin: {{miPortfolio.education.end}}</p>
+                    <img src="{{edu.img}}"  alt="Argentina Programa" class="img-education">
+                    <h3>{{edu.nombre}}</h3>
+                    <h4>{{edu.titulo}}</h4>
+                    <p class="copy">Inicio: {{edu.inicio}}</p>
+                    <p class="copy">Fin: {{edu.fin}}</p>
             </div>
-            <div class="cont-educacion">
+           <!-- <div class="cont-educacion">
                 <div class="pencil-acerca-de">
                     <a href="./" class="pencil-icon">
                         <i class='bx bxs-edit'></i>
@@ -29,11 +29,11 @@
                         <i class='bx bx-trash'></i>
                     </a>
                 </div>   
-            <img [src]="miPortfolio.education2.img" alt="liceo" class="img-education">
-            <h3>{{miPortfolio.education2.company}}</h3>
-            <h4>{{miPortfolio.education2.career}}</h4>
-            <p class="copy"> Inicio: {{miPortfolio.education2.start}}</p>
-            <p class="copy"> Inicio: {{miPortfolio.education2.end}}</p>
-            </div>    
+            <img [src]="educacion.img" alt="liceo" class="img-education">
+            <h3>{{educacion.nombre}}</h3>
+            <h4>{{educacion.titulo}}</h4>
+            <p class="copy"> Inicio: {{educacion.inicio}}</p>
+            <p class="copy"> Inicio: {{educacion.fin}}</p>
+            </div>-->    
         </section>
     </div>         
