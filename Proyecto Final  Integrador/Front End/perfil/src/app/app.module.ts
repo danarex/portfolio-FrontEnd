@@ -17,6 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioService } from './service/portfolio.service';
 import {HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { Pagina404Component } from './componentes/pagina404/pagina404.component';
+import { IndexComponent } from './componentes/index/index.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     SkillsComponent,
     FooterComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    Pagina404Component,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

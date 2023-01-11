@@ -10,8 +10,8 @@ export class SkillsService {
   URL="http://localhost:8080/skills/";
   constructor(private http:HttpClient) { }
 
-    public getSkills(): Observable <skills>{
-      return this.http.get<skills>(this.URL + 'traer/perfil');
+    public getSkills(): Observable <skills[]>{
+      return this.http.get<skills[]>(this.URL + 'traer');
     
    }
 }

@@ -1,8 +1,9 @@
 <div class="contenedor" id="experiencia">
     <div class="contenedor-experiencia">
         <h2 class="subtitulo">Experiencia</h2>
-        <div class="experience">
-        <div class="cont-experiencia">
+        
+        <section class="experience" >
+        <div class="cont-experiencia" *ngFor="let exp of experiencia">
             <div class="pencil-acerca-de">
                 <a href="./" class="pencil-icon">
                     <i class='bx bxs-edit'></i>
@@ -10,14 +11,13 @@
             <div class="trash-icon">
                 <a href="./" class="trash-icon">
                   <i class='bx bx-trash'></i></a></div>           
-            <img [src]="miPortfolio.experience.img" alt="BAM" class="img-experiencia">
-            <h3>{{miPortfolio.experience.company}}</h3>
-            <h4>{{miPortfolio.experience.position}}</h4>
-    <p class="copy">Tipo de empleo: {{miPortfolio.experience.mode}}</p>
-    <p class="copy">Inicio: {{miPortfolio.experience.start}}</p>
-    <p class="copy">Fin: {{miPortfolio.experience.end}}</p>
+            <img src="{{exp.img}}" alt="BAM" class="img-experiencia">
+            <h3>{{exp.nombre}}</h3>
+            <h4>{{exp.puesto}}</h4>
+    <p class="copy">Inicio: {{exp.inicio}}</p>
+    <p class="copy">Fin: {{exp.fin}}</p>
         </div>
-        <div class="cont-experiencia">
+       <!-- <div class="cont-experiencia">
             <div class="pencil-acerca-de">
                 <a href="./" class="pencil-icon">
                     <i class='bx bxs-edit'></i>
@@ -27,12 +27,11 @@
                     <i class='bx bx-trash'></i>
                 </a>
             </div>   
-            <img [src]="miPortfolio.experience2.img" alt="FB" class="img-experiencia">
-        <h3>{{miPortfolio.experience2.company}}</h3>
-        <h4>{{miPortfolio.experience2.position}}</h4>
-    <p class="copy">Tipo de empleo: {{miPortfolio.experience2.mode}}</p>
-    <p class="copy">Inicio: {{miPortfolio.experience2.start}}</p>
-    <p class="copy">Fin: {{miPortfolio.experience2.end}}</p>
-        </div>
-    </div>
+            <img [src]="experiencia.img" alt="FB" class="img-experiencia">
+        <h3>{{experiencia.nombre}}</h3>
+        <h4>{{experiencia.puesto}}</h4>
+    <p class="copy">Inicio: {{experiencia.inicio}}</p>
+    <p class="copy">Fin: {{experiencia.fin}}</p>
+        </div>-->
+    </section>
 </div> 

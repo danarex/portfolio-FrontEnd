@@ -43,7 +43,6 @@ public class ExperienciaController {
     public Experiencia editExperiencia(@PathVariable Long id,
                             @RequestParam("nombre") String nuevoNombre,
                             @RequestParam("puesto") String nuevoPuesto,
-                            @RequestParam("esTrabajoActual") boolean nuevoEsTrabajoActual,
                             @RequestParam("img") String nuevoImg,
                             @RequestParam("inicio") String nuevoInicio,
                             @RequestParam("fin") String nuevoFin
@@ -53,7 +52,6 @@ public class ExperienciaController {
     
     experiencia.setNombre(nuevoNombre);
     experiencia.setPuesto(nuevoPuesto);
-    experiencia.setEsTrabajoActual(nuevoEsTrabajoActual);
     experiencia.setImg(nuevoImg);
     experiencia.setInicio(nuevoInicio);
     experiencia.setFin(nuevoFin);

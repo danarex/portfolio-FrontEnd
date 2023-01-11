@@ -10,8 +10,8 @@ export class ExperienciaService {
   URL="http://localhost:8080/experiencia/";
   constructor(private http:HttpClient) { }
 
-    public getExperiencia(): Observable <experiencia>{
-      return this.http.get<experiencia>(this.URL + 'traer/perfil');
+    public getExperiencia(): Observable <experiencia[]>{
+      return this.http.get<experiencia[]>(this.URL + 'traer');
     
    }
 }

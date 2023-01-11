@@ -25,6 +25,7 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
     
+    
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
