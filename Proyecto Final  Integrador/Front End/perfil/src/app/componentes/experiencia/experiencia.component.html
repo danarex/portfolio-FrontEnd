@@ -1,11 +1,9 @@
 <div class="contenedor" id="experiencia">
     <div class="contenedor-experiencia">
         <h2 class="subtitulo">Experiencia</h2>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
-                Nueva Experiencia
-            </button>
-        </div>
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
         
         <section class="experience" >
         <div class="cont-experiencia" *ngFor="let Experiencia of expe">
@@ -16,11 +14,11 @@
             <div class="trash-icon">
                 <a href="./" class="trash-icon">
                   <i class='bx bx-trash'></i></a></div>           
-            <img src="{{Experiencia.imgE}}" alt="BAM" class="img-experiencia">
-            <h3>{{Experiencia.nombreE}}</h3>
-            <h4>{{Experiencia.puestoE}}</h4>
-    <p class="copy">Inicio: {{Experiencia.inicioE}}</p>
-    <p class="copy">Fin: {{Experiencia.finE}}</p>
+            <img src="{{expe[1].imgE}}" alt="BAM" class="img-experiencia">
+            <h3>{{expe[1].nombreE}}</h3>
+            <h4>{{expe[1].puestoE}}</h4>
+    <p class="copy">Inicio: {{expe[1].inicioE}}</p>
+    <p class="copy">Fin: {{expe[1].finE}}</p>
         </div>
        <!-- <div class="cont-experiencia">
             <div class="pencil-acerca-de">
