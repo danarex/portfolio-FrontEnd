@@ -8,19 +8,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-@Getter @Setter
+
 @Entity
 public class Proyectos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String nombreE;
+    private String descripcionE;
+    private String fechaE;
+    private String linkE;
+    private String imgE;
+
+   
+    
+          
       //relacion
     @ManyToOne
     //creacion de columna con llave foranea
@@ -29,39 +34,68 @@ public class Proyectos {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Persona persona;
     
-    private Long personaid;
-    
-public Proyectos(Long id, String nombre, String descripcion, String fecha, String link, String img){
+    private Long personaid; 
+   
+ public Proyectos() {
+    }
+
+    public Proyectos(String nombreE, String descripcionE, String fechaE, String linkE, String imgE) {
+        
+        this.nombreE = nombreE;
+        this.descripcionE = descripcionE;
+        this.fechaE = fechaE;
+        this.linkE = linkE;
+        this.imgE = imgE;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
-        this.nombre= nombre;
-        this.descripcion = descripcion;
-        this.fecha = fecha;
-        this.link = link;
-        this.img = img;
-} 
+    }
 
-public Proyectos(){
+    public String getNombreE() {
+        return nombreE;
+    }
 
-}
+    public void setNombreE(String nombreE) {
+        this.nombreE = nombreE;
+    }
 
-@NotNull
-@Size(min=1, max=25, message="No cumple con la longitud")
-private String nombre;
+    public String getDescripcionE() {
+        return descripcionE;
+    }
 
-@NotNull
-@Size(min=1, max=200, message="No cumple con la longitud")
-private String descripcion;
+    public void setDescripcionE(String descripcionE) {
+        this.descripcionE = descripcionE;
+    }
 
-@NotNull
-@Size(min=1, max=25, message="No cumple con la longitud")
-private String fecha;
+    public String getFechaE() {
+        return fechaE;
+    }
 
+    public void setFechaE(String fechaE) {
+        this.fechaE = fechaE;
+    }
 
-@Size(min=1, max=100, message="No cumple con la longitud")
-private String link;
+    public String getLinkE() {
+        return linkE;
+    }
 
+    public void setLinkE(String linkE) {
+        this.linkE = linkE;
+    }
 
-@Size(min=1, max=100, message="No cumple con la longitud")
-private String img;
-    
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
+    }
+ 
+ 
+ 
 }

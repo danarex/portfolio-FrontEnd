@@ -2,37 +2,47 @@
 package com.portfolio.dana.Service;
 
 import com.portfolio.dana.Entity.Experiencia;
-import com.portfolio.dana.Interface.IExperienciaService;
 import com.portfolio.dana.Repository.IExperienciaRepository;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class ImpExperienciaService implements IExperienciaService {
-    @Autowired  IExperienciaRepository iexperienciaRepository;
+@Transactional
+public class ImpExperienciaService  {
+    @Autowired  
+    IExperienciaRepository iexperienciaRepository;
 
-    @Override
-    public List<Experiencia> getExperiencia() {
-        List <Experiencia> experiencia = iexperienciaRepository.findAll();
-        return experiencia;
-    }
-
-    @Override
-    public void saveExperiencia(Experiencia experiencia) {
-        iexperienciaRepository.save(experiencia);
-    }
-
-    @Override
-    public void deleteExperiencia(Long id) {
-        iexperienciaRepository.deleteById (id);
-    }
-
-    @Override
-    public Experiencia findExperiencia(Long id) {
-        Experiencia experiencia = iexperienciaRepository.findById(id).orElse(null);
-        return experiencia;
-    }
     
+    public List<Experiencia> list() {
+        return iexperienciaRepository.findAll();
+        
+    }
+
+ public Optional<Experiencia> getOne(Long id){
+         return iexperienciaRepository.findById(id);
+     }
+     
+     public Optional<Experiencia> getByNombreE(String nombreE){
+         return iexperienciaRepository.findByNombreE(nombreE);
+     }
+     
+     public void save(Experiencia educa){
+         iexperienciaRepository.save(educa);
+     }
+     
+     public void delete(Long id){
+         iexperienciaRepository.deleteById(id);
+     }
+     
+     public boolean existsById(Long id){
+         return iexperienciaRepository.existsById(id);
+     }
+     
+     public boolean existsByNombreE(String nombreE){
+         return iexperienciaRepository.existsByNombreE(nombreE);
+     }
 }

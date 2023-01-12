@@ -1,17 +1,17 @@
-export class experiencia {
+export class Experiencia {
     id?:number;
-    nombre:String;
-    puesto:String;
-    inicio:String;
-    fin:String;
-    img:String;
+    nombreE:string;
+    puestoE:string;
+    inicioE:string;
+    finE:string;
+    imgE:string;
 
-    constructor(nombre:String,puesto:String, img:String,inicio:String,fin:String) {
-        this.nombre=nombre;
-        this.puesto=puesto;
-        this.img=img;
-        this.inicio=inicio;
-        this.fin=fin;
+    constructor(nombreE:string,puestoE:string, imgE:string,inicioE:string,finE:string) {
+        this.nombreE=nombreE;
+        this.puestoE=puestoE;
+        this.imgE=imgE;
+        this.inicioE=inicioE;
+        this.finE=finE;
          
         
     }

@@ -8,22 +8,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 
-@Getter @Setter
+
 @Entity
 public class Experiencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String nombreE;
+    private String puestoE;
+    private String inicioE ;
+    private String finE;
+    private String imgE;
     
-      //relacion
+        
+     //relacion
     @ManyToOne
     //creacion de columna con llave foranea
     @JoinColumn(name = "personaid", insertable=false, updatable=false)
@@ -31,40 +33,67 @@ public class Experiencia {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Persona persona;
     
-    private Long personaid;
+    private Long personaid; 
     
-public Experiencia(Long id, String nombre, String puesto,String inicio, String fin, String img){
+
+    public Experiencia() {
+    }
+
+    public Experiencia(String nombreE, String puestoE, String inicioE, String finE, String imgE) {
+       this.nombreE = nombreE;
+        this.puestoE = puestoE;
+        this.inicioE = inicioE;
+        this.finE = finE;
+        this.imgE = imgE;
+    
+      }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
-        this.nombre= nombre;
-        this.puesto = puesto;
-        this.inicio = inicio;
-        this.fin= fin;
-        this.img = img;
-} 
-
-public Experiencia(){
-
-}
-
-@NotNull
-@Size(min=1, max=25, message="No cumple con la longitud")
-private String nombre;
-
-@NotNull
-@Size(min=1, max=25, message="No cumple con la longitud")
-private String puesto;
-
-
-@NotNull
-@Size(min=1, max=25, message="No cumple con la longitud")
-private String inicio;
-
-@NotNull
-@Size(min=1, max=25, message="No cumple con la longitud")
-private String fin;
-
-
-@Size(min=1, max=100, message="No cumple con la longitud")
-private String img;
+    }
     
+        public String getNombreE() {
+        return nombreE;
+    }
+
+    public void setNombreE(String nombreE) {
+        this.nombreE = nombreE;
+    }
+
+    public String getPuestoE() {
+        return puestoE;
+    }
+
+    public void setPuestoE(String puestoE) {
+        this.puestoE = puestoE;
+    }
+
+    public String getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(String inicioE) {
+        this.inicioE = inicioE;
+    }
+
+    public String getFinE() {
+        return finE;
+    }
+
+    public void setFinE(String finE) {
+        this.finE = finE;
+    }
+
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
+    }
+
 }

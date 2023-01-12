@@ -6,27 +6,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 
-
-/**
- *
- * @author dmora
- */
-@Getter
-@Setter
 @Entity
 public class Educacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+    private String nombreE;
+    private String tituloE;
+    private String inicioE;
+    private String finE;
+    private String imgE;
 
   //relacion
     @ManyToOne
@@ -37,36 +31,65 @@ public class Educacion {
     private Persona persona;
     
     private Long personaid;
-    public Educacion(int id, String nombre, String titulo, String inicio, String fin, String img) {
-        this.id = id;
-        this.nombre = nombre;
-        this.titulo = titulo;
-        this.inicio = inicio;
-        this.fin = fin;
-        this.img = img;
+    
+    public Educacion(String nombreE, String tituloE, String inicioE, String finE, String imgE) {
+        
+        this.nombreE = nombreE;
+        this.tituloE = tituloE;
+        this.inicioE = inicioE;
+        this.finE = finE;
+        this.imgE = imgE;
     }
 
     public Educacion() {
 
     }
+  public Long getId() {
+        return id;
+    }
 
-    @NotNull
-    @Size(min = 1, max = 25, message = "No cumple con la longitud")
-    private String nombre;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @NotNull
-    @Size(min = 1, max = 25, message = "No cumple con la longitud")
-    private String titulo;
+    public String getNombreE() {
+        return nombreE;
+    }
 
-    @NotNull
-    @Size(min = 1, max = 25, message = "No cumple con la longitud")
-    private String inicio;
+    public void setNombreE(String nombreE) {
+        this.nombreE = nombreE;
+    }
 
-    @NotNull
-    @Size(min = 1, max = 25, message = "No cumple con la longitud")
-    private String fin;
+    public String getTituloE() {
+        return tituloE;
+    }
 
-    @Size(min = 1, max = 100, message = "No cumple con la longitud")
-    private String img;
+    public void setTituloE(String tituloE) {
+        this.tituloE = tituloE;
+    }
+    
+      public String getInicioE() {
+        return inicioE;
+    }
+
+    public void setInicioE(String inicioE) {
+        this.inicioE = inicioE;
+    }
+        public String getFinE() {
+        return finE;
+    }
+
+    public void setFinE(String finE) {
+        this.finE = finE;
+    }
+    
+        public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
+    }
+    
 
 }

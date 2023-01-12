@@ -1,17 +1,17 @@
-export class educacion {
+export class Educacion {
     id?:number;
-    nombre:String;
-    titulo:String;
-    inicio:String;
-    fin:String;
-    img:String;
+    nombreE:string;
+    tituloE:string;
+    inicioE:string;
+    finE:string;
+    imgE:string;
 
-    constructor(nombre:String,titulo:String, img:String,inicio:String,fin:String) {
-        this.nombre=nombre;
-        this.titulo=titulo;
-        this.img=img;
-        this.inicio=inicio;
-        this.fin=fin;
+    constructor(nombreE:string,tituloE:string, imgE:string,inicioE:string,finE:string) {
+        this.nombreE=nombreE;
+        this.tituloE=tituloE;
+        this.imgE=imgE;
+        this.inicioE=inicioE;
+        this.finE=finE;
         
     }
 }

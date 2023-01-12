@@ -2,37 +2,47 @@
 package com.portfolio.dana.Service;
 
 import com.portfolio.dana.Entity.Educacion;
-import com.portfolio.dana.Interface.IEducacionService;
 import com.portfolio.dana.Repository.IEducacionRepository;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class ImpEducacionService implements IEducacionService {
-    @Autowired  IEducacionRepository ieducacionRepository;
+@Transactional
+public class ImpEducacionService  {
+    @Autowired  
+    IEducacionRepository ieducacionRepository;
 
-    @Override
-    public List<Educacion> getEducacion() {
-        List <Educacion> educacion = ieducacionRepository.findAll();
-        return educacion;
-    }
-
-    @Override
-    public void saveEducacion(Educacion educacion) {
-        ieducacionRepository.save(educacion);
-    }
-
-    @Override
-    public void deleteEducacion(Long id) {
-        ieducacionRepository.deleteById (id);
-    }
-
-    @Override
-    public Educacion findEducacion(Long id) {
-        Educacion educacion = ieducacionRepository.findById(id).orElse(null);
-        return educacion;
-    }
     
+    public List<Educacion> list() {
+        return ieducacionRepository.findAll();
+        
+    }
+
+ public Optional<Educacion> getOne(Long id){
+         return ieducacionRepository.findById(id);
+     }
+     
+     public Optional<Educacion> getByNombreE(String nombreE){
+         return ieducacionRepository.findByNombreE(nombreE);
+     }
+     
+     public void save(Educacion educa){
+         ieducacionRepository.save(educa);
+     }
+     
+     public void delete(Long id){
+         ieducacionRepository.deleteById(id);
+     }
+     
+     public boolean existsById(Long id){
+         return ieducacionRepository.existsById(id);
+     }
+     
+     public boolean existsByNombreE(String nombreE){
+         return ieducacionRepository.existsByNombreE(nombreE);
+     }
 }
