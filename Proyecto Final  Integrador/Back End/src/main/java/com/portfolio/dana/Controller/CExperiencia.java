@@ -27,7 +27,7 @@ public class CExperiencia {
     @Autowired
     ImpExperienciaService impExperienciaService;
     
-    @GetMapping ("/experiencia/traer")
+    @GetMapping ("/traer")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = impExperienciaService.list();
         return new ResponseEntity(list, HttpStatus.OK);
@@ -42,7 +42,7 @@ public class CExperiencia {
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
     
-    @DeleteMapping("/experiencia/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id){
         if(!impExperienciaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
@@ -51,7 +51,7 @@ public class CExperiencia {
         return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
     }
     
-    @PostMapping("/experiencia/crear")
+    @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexperiencia){
         if(StringUtils.isBlank(dtoexperiencia.getNombreE())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -68,7 +68,7 @@ public class CExperiencia {
                 
     }
     
-    @PutMapping("/experiencia/editar/{id}")
+    @PutMapping("/editar/{id}")
     public ResponseEntity<?> update(@PathVariable("id") Long id, @RequestBody dtoExperiencia dtoexperiencia){
         if(!impExperienciaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);

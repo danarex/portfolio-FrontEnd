@@ -28,7 +28,7 @@ public class CSkills {
     @Autowired
     ImpSkillsService impSkillsService;
     
-    @GetMapping ("/skills/traer")
+    @GetMapping ("/traer")
     public ResponseEntity<List<Skills>> list(){
         List<Skills> list = impSkillsService.list();
         return new ResponseEntity(list, HttpStatus.OK);
@@ -43,7 +43,7 @@ public class CSkills {
         return new ResponseEntity(skills, HttpStatus.OK);
     }
     
-    @DeleteMapping("/skills/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id){
         if(!impSkillsService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
@@ -52,7 +52,7 @@ public class CSkills {
         return new ResponseEntity(new Mensaje("Skills eliminada"), HttpStatus.OK);
     }
     
-    @PostMapping("/skills/crear")
+    @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody dtoSkills dtoskills){
         if(StringUtils.isBlank(dtoskills.getNombreE())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);

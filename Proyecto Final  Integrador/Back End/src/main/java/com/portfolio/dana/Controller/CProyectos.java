@@ -29,7 +29,7 @@ public class CProyectos {
     @Autowired
     ImpProyectosService impProyectosService;
     
-    @GetMapping ("/proyectos/traer")
+    @GetMapping ("/traer")
     public ResponseEntity<List<Proyectos>> list(){
         List<Proyectos> list = impProyectosService.list();
         return new ResponseEntity(list, HttpStatus.OK);

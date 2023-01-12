@@ -22,6 +22,9 @@ import { IndexComponent } from './componentes/index/index.component';
 import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
 import { NewEducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { EditProyectosComponent } from './componentes/proyectos/edit-proyectos.component';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { NewEducacionComponent } from './componentes/educacion/new-educacion/new
     Pagina404Component,
     IndexComponent,
     NewExperienciaComponent,
-    NewEducacionComponent
+    NewEducacionComponent,
+    EditEducacionComponent,
+    EditExperienciaComponent,
+    EditProyectosComponent
   ],
   imports: [
     BrowserModule,

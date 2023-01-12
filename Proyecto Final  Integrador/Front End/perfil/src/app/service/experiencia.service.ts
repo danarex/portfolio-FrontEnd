@@ -15,8 +15,8 @@ export class ExperienciaService {
       return this.httpClient.get<Experiencia[]>(this.expURL + 'traer');
     }
 
-    public detail(id:number): Observable<Experiencia[]> {
-      return this.httpClient.get<Experiencia[]>(this.expURL + `detail/$id`);
+    public detail(id:number): Observable<Experiencia> {
+      return this.httpClient.get<Experiencia>(this.expURL + `detail/$id`);
 
       
    }
