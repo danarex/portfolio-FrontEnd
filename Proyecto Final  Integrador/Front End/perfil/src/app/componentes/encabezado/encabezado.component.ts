@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/service/persona.service';
 import { persona } from 'src/app/model/persona.model';
 import { EducacionService } from 'src/app/service/educacion.service';
-import { educacion } from 'src/app/model/educacion.model';
+import { Educacion } from 'src/app/model/educacion.model';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
-import { experiencia } from 'src/app/model/experiencia.model';
+import { Experiencia } from 'src/app/model/experiencia.model';
 
 
 @Component({
@@ -16,8 +16,8 @@ import { experiencia } from 'src/app/model/experiencia.model';
 export class EncabezadoComponent implements OnInit {
   /*miPortfolio:any;*/
   persona:persona[]= []; 
-  educacion:educacion[]= [];
-  experiencia:experiencia[]= [];
+  educacion:Educacion[]= [];
+  experiencia:Experiencia[]= [];
   constructor(private personaService:PersonaService, private educacionService:EducacionService, private experienciaService:ExperienciaService) { }
 
   ngOnInit(): void {
@@ -27,11 +27,11 @@ export class EncabezadoComponent implements OnInit {
     this.personaService.getPersona().subscribe(data5=>{
       this.persona=data5}
       );
-      this.experienciaService.getExperiencia().subscribe(data2 => {
+      this.experienciaService.traer().subscribe(data2 => {
         this.experiencia=data2;
       });  
 
-      this.educacionService.getEducacion().subscribe(data7 => {
+      this.educacionService.traer().subscribe(data7 => {
         this.educacion=data7;
       });
 

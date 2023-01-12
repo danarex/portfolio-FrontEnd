@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { proyectos } from 'src/app/model/proyectos.model';
+import { Proyectos } from 'src/app/model/proyectos.model';
 import { ProyectosService } from 'src/app/service/proyectos.service';
+import { TokenService } from 'src/app/service/token.service';
 
 
 @Component({
@@ -9,14 +10,39 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  proyectos:proyectos[] = [];
-  constructor(public proyectosService:ProyectosService) { }
+  Proyectos: Proyectos[] = [];
+  constructor(
+    private proyectosService: ProyectosService,
+    private tokenService: TokenService
+  ) {}
+
+  isLogged = false;
 
   ngOnInit(): void {
-    this.proyectosService.getProyectos().subscribe(data3 => {
-    
-      this.proyectos=data3;
+    this.cargarProyecto();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarProyecto(): void {
+    this.proyectosService.traer().subscribe((data) => {
+      this.Proyectos = data;
     });
   }
 
+  delete(id?: number) {
+    if (id != undefined) {
+      this.proyectosService.delete(id).subscribe(
+        (data) => {
+          this.cargarProyecto();
+        },
+        (err) => {
+          alert('No se pudo borrar el proyecto');
+        }
+      );
+    }
+  }
 }

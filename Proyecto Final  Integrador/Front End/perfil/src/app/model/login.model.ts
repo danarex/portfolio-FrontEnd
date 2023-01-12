@@ -1,10 +1,10 @@
 export class login {
     id?:number;
-    nombre:String;
-    email:String;
+    nombre:string;
+    email:string;
   
 
-    constructor(nombre:String,email:String) {
+    constructor(nombre:string,email:string) {
         this.nombre=nombre;
         this.email=email;
      

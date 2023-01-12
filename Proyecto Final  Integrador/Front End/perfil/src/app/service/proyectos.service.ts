@@ -1,17 +1,39 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { proyectos } from '../model/proyectos.model';
+import { Proyectos } from '../model/proyectos.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL="http://localhost:8080/proyectos/";
-  constructor(private http:HttpClient) { }
+  proURL='http://localhost:8080/proyectos/';
 
-    public getProyectos(): Observable <proyectos[]>{
-      return this.http.get<proyectos[]>(this.URL + 'traer');
-    
+  constructor(private httpClient:HttpClient) { }
+
+    public traer(): Observable <Proyectos[]>{
+      return this.httpClient.get<Proyectos[]>(this.proURL + 'traer');
+    }
+
+    public detail(id:number): Observable<Proyectos[]> {
+      return this.httpClient.get<Proyectos[]>(this.proURL + `detail/$id`);
+
+      
    }
+
+   public save(proyectos:Proyectos): Observable<any> {
+
+    return this.httpClient.post<any>(this.proURL + `crear`, proyectos);
+   }
+   
+   public update(id:number,proyectos:Proyectos): Observable<any> {
+    return this.httpClient.put<any>(this.proURL + `editar/${id}`, proyectos);
+   }
+
+   public delete(id:number): Observable<any> {
+      return this.httpClient.delete<any>(this.proURL + `borrar/${id}`);
+   }
+
+   
+
 }

@@ -1,10 +1,10 @@
 export class redesSociales {
     id?:number;
-    nombre:String;
-    img:String;
+    nombre:string;
+    img:string;
    
 
-    constructor(nombre:String,img:String) {
+    constructor(nombre:string,img:string) {
         this.nombre=nombre;
         this.img=img;
       

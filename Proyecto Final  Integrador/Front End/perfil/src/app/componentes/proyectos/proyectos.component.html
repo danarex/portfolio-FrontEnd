@@ -1,14 +1,14 @@
 <div class="row">
     <h1 class="subtitulo">Proyectos</h1>
-<div class="contenedor-gallery" *ngFor="let proy of proyectos"> 
+<div class="contenedor-gallery" *ngFor="let Proyectos of Proyectos"> 
     <div class="col-sm-12 col-md-7 col-lg-7">
-        <h4>{{proy.nombre}}</h4>
-        <h5>{{proy.fecha}}</h5>
-        <p>{{proy.descripcion}}</p>
-        <h6>{{proy.link}}</h6>
+        <h4>{{Proyectos.nombreE}}</h4>
+        <h5>{{Proyectos.fechaE}}</h5>
+        <p>{{Proyectos.descripcionE}}</p>
+        <h6>{{Proyectos.linkE}}</h6>
     </div>
     <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1">
-        <img src="{{proy.img}}" alt="boho-one"width="80%" class="img-gallery img-fluid">
+        <img src="{{Proyectos.imgE}}" alt="boho-one"width="80%" class="img-gallery img-fluid">
     </div>
   <!--  <div class="col-sm-12 col-md-7 col-lg-7">
         <h4>{{proyectos[0].nombre}}</h4>

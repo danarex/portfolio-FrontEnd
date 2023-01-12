@@ -1,17 +1,17 @@
-export class proyectos {
+export class Proyectos {
     id?:number;
-    nombre:String;
-    descripcion:String;
-    img:String;
-    fecha:String;
-    link:String;
+    nombreE:string;
+    descripcionE:string;
+    imgE:string;
+    fechaE:string;
+    linkE:string;
 
-    constructor(nombre:String,descripcion:String, img:String,fecha:String,link:String) {
-        this.nombre=nombre;
-        this.descripcion=descripcion;
-        this.img=img;
-        this.fecha=fecha;
-        this.link=link;
+    constructor(nombreE:string,descripcionE:string, imgE:string,fechaE:string,linkE:string) {
+        this.nombreE=nombreE;
+        this.descripcionE=descripcionE;
+        this.imgE=imgE;
+        this.fechaE=fechaE;
+        this.linkE=linkE;
         
     }
 }

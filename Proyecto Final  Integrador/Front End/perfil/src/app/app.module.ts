@@ -11,7 +11,7 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioService } from './service/portfolio.service';
@@ -19,6 +19,9 @@ import {HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { Pagina404Component } from './componentes/pagina404/pagina404.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
 
 
 @NgModule({
@@ -33,16 +36,19 @@ import { IndexComponent } from './componentes/index/index.component';
     ProyectosComponent,
     SkillsComponent,
     FooterComponent,
-    IniciarSesionComponent,
+    LoginComponent,
     PortfolioComponent,
     Pagina404Component,
-    IndexComponent
+    IndexComponent,
+    NewExperienciaComponent,
+    NewEducacionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({
     
     })
