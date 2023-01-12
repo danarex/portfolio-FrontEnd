@@ -10,18 +10,22 @@ import { Pagina404Component } from './componentes/pagina404/pagina404.component'
 import { IndexComponent } from './componentes/index/index.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
 import { NewEducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+
 
 const routes: Routes = [
   {path:'', component: IndexComponent},
 {path:'portfolio', component:PortfolioComponent},
 {path:'login', component:LoginComponent},
-{path:'', redirectTo: 'portfolio', pathMatch:'full' },
 {path:'experiencia', component: ExperienciaComponent},
 {path:'educacion', component: EducacionComponent},
 {path:'skills', component: SkillsComponent},
 {path:'proyectos', component: ProyectosComponent},
 {path:'nueva experiencia', component:NewExperienciaComponent},
 {path:'nueva educacion', component:NewEducacionComponent},
+{path:'editEducacion', component: EditEducacionComponent},
+{path:'editExperiencia', component: EditExperienciaComponent},
 {path:'**', component: Pagina404Component}
 
 ];
