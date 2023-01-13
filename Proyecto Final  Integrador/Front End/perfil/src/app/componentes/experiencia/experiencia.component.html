@@ -1,14 +1,12 @@
 <div class="contenedor" id="experiencia">
     <div class="contenedor-experiencia">
         <h2 class="subtitulo">Experiencia</h2>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
-                Nueva Experiencia
-            </button>
-        </div>
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" >
+            Nueva Experiencia
+        </button>
         
         <section class="experience" >
-        <div class="cont-experiencia" *ngFor="let Experiencia of expe">
+        <div class="cont-experiencia" *ngFor="let Experiencia of experiencia">
             <div class="pencil-acerca-de">
                 <a href="./" class="pencil-icon">
                     <i class='bx bxs-edit'></i>
@@ -16,11 +14,11 @@
             <div class="trash-icon">
                 <a href="./" class="trash-icon">
                   <i class='bx bx-trash'></i></a></div>           
-            <img src="{{Experiencia.imgE}}" alt="BAM" class="img-experiencia">
-            <h3>{{Experiencia.nombreE}}</h3>
-            <h4>{{Experiencia.puestoE}}</h4>
-    <p class="copy">Inicio: {{Experiencia.inicioE}}</p>
-    <p class="copy">Fin: {{Experiencia.finE}}</p>
+            <img src="{{experiencia[0].imgE}}" alt="BAM" class="img-experiencia">
+            <h3>{{experiencia[0].nombreE}}</h3>
+            <h4>{{experiencia[0].puestoE}}</h4>
+    <p class="copy">Inicio: {{experiencia[0].inicioE}}</p>
+    <p class="copy">Fin: {{experiencia[0].finE}}</p>
         </div>
        <!-- <div class="cont-experiencia">
             <div class="pencil-acerca-de">

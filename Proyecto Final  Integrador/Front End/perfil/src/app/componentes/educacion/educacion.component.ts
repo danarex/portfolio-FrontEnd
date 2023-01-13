@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  edu:Educacion[] = [];
+  educacion:Educacion[] = [];
   constructor(private educacionService:EducacionService, private tokenService: TokenService) { }
 
 
@@ -27,7 +27,7 @@ export class EducacionComponent implements OnInit {
 
   cargarEducacion(): void {
     this.educacionService.traer().subscribe((data) => {
-      this.edu = data;
+      this.educacion = data;
     });
   }
 

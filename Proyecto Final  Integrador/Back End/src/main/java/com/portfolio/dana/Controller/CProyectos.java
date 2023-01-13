@@ -44,7 +44,7 @@ public class CProyectos {
         return new ResponseEntity(proyectos, HttpStatus.OK);
     }
     
-    @DeleteMapping("/proyectos/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id){
         if(!impProyectosService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
@@ -53,7 +53,7 @@ public class CProyectos {
         return new ResponseEntity(new Mensaje("Proyectos eliminada"), HttpStatus.OK);
     }
     
-    @PostMapping("/proyectos/crear")
+    @PostMapping("/crear")
     public ResponseEntity<?> create(@RequestBody dtoProyectos dtoproyectos){
         if(StringUtils.isBlank(dtoproyectos.getNombreE())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);

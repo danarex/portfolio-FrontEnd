@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
@@ -15,15 +14,14 @@ import { EditEducacionComponent } from './componentes/educacion/edit-educacion.c
 
 
 const routes: Routes = [
-  {path:'', component: IndexComponent},
-{path:'portfolio', component:PortfolioComponent},
+ {path:'', component: IndexComponent},
 {path:'login', component:LoginComponent},
 {path:'experiencia', component: ExperienciaComponent},
 {path:'educacion', component: EducacionComponent},
 {path:'skills', component: SkillsComponent},
 {path:'proyectos', component: ProyectosComponent},
-{path:'nueva experiencia', component:NewExperienciaComponent},
-{path:'nueva educacion', component:NewEducacionComponent},
+{path:'nuevaexp', component:NewExperienciaComponent},
+{path:'nuevaedu', component:NewEducacionComponent},
 {path:'editEducacion', component: EditEducacionComponent},
 {path:'editExperiencia', component: EditExperienciaComponent},
 {path:'**', component: Pagina404Component}

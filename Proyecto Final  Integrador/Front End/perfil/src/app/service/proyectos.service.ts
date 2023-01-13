@@ -15,8 +15,8 @@ export class ProyectosService {
       return this.httpClient.get<Proyectos[]>(this.proURL + 'traer');
     }
 
-    public detail(id:number): Observable<Proyectos[]> {
-      return this.httpClient.get<Proyectos[]>(this.proURL + `detail/$id`);
+    public detail(id:number): Observable<Proyectos> {
+      return this.httpClient.get<Proyectos>(this.proURL + `detail/$id`);
 
       
    }
