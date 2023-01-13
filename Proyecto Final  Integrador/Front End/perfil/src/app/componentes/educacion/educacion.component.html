@@ -10,16 +10,16 @@
     <div class="col-lg-11">
         <table class="table">
             <tbody>
-                <tr *ngFor="let Educacion of edu">
+                <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h2>{{Educacion.nombreE}}</h2>
+                        <h2>{{educacion[0].nombreE}}</h2>
                     </td>
-                    <td>{{Educacion.tituloE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                    <td>{{educacion[0].tituloE}}</td>
+                    <td >
+                        <button class="btn btn-light" routerLink="/editedu/{{educacion[0].id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
-                    <td *ngIf="isLogged">
+                    <td >
                         <button class="btn btn-danger" (click)="delete(Educacion.id)">
                             <i class="bi bi-trash-fill"></i> BORRAR</button>
                     </td>

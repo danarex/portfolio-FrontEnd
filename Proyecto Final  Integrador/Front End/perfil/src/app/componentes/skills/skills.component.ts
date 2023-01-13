@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsService } from 'src/app/service/skills.service';
 import { Skills } from 'src/app/model/skills.model';
 import { TokenService } from 'src/app/service/token.service';
