@@ -16,7 +16,7 @@ export class ProyectosService {
     }
 
     public detail(id:number): Observable<Proyectos> {
-      return this.httpClient.get<Proyectos>(this.proURL + `detail/$id`);
+      return this.httpClient.get<Proyectos>(this.proURL + `detail/${id}`);
 
       
    }

@@ -11,6 +11,8 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
 import { NewEducacionComponent } from './componentes/educacion/new-educacion/new-educacion.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { NewProyectosComponent } from './componentes/proyectos/new-proyectos.component';
+import { EditProyectosComponent } from './componentes/proyectos/edit-proyectos.component';
 
 
 const routes: Routes = [
@@ -22,8 +24,10 @@ const routes: Routes = [
 {path:'proyectos', component: ProyectosComponent},
 {path:'nuevaexp', component:NewExperienciaComponent},
 {path:'nuevaedu', component:NewEducacionComponent},
-{path:'editEducacion', component: EditEducacionComponent},
-{path:'editExperiencia', component: EditExperienciaComponent},
+{path:'editedu/:id', component: EditEducacionComponent},
+{path:'editexp/:id', component: EditExperienciaComponent},
+{path:'nuevoproy', component: NewProyectosComponent},
+{path:'editproy/:id', component: EditProyectosComponent},
 {path:'**', component: Pagina404Component}
 
 ];

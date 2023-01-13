@@ -20,26 +20,26 @@ export class EditProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.proyectosService.detail(id).subscribe(
-      data =>{
+    this.proyectosService.detail(id).subscribe({
+      next:data =>{
         this.proy= data;
-      }, err =>{
+      }, error: err =>{
         alert("Error al modificar experiencia");
         this.router.navigate(['']);
       }
-    )
+  });
   }
 
   onUpdate(): void{
     const id = this.activatedRoute.snapshot.params['id'];
-    this.proyectosService.update(id, this.proy).subscribe(
-      data => {
+    this.proyectosService.update(id, this.proy).subscribe({
+      next:data => {
         this.router.navigate(['']);
-      }, err =>{
+      }, error:err =>{
          alert("Error al modificar experiencia");
          this.router.navigate(['']);
       }
-    )
+  });
   }
 
 }
