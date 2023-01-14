@@ -7,7 +7,7 @@ import { login } from '../model/login.model';
   providedIn: 'root'
 })
 export class LoginService {
-  URL="http://localhost:8080/login/";
+  URL='https://backend-b07e.onrender.com/login/';
   constructor(private http:HttpClient) { }
 
     public getLogin(): Observable <login>{

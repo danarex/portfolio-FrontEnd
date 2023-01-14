@@ -7,7 +7,7 @@ import { redesSociales } from '../model/redesSociales.model';
   providedIn: 'root'
 })
 export class RedesSocialesService {
-  URL="http://localhost:8080/redessociales/";
+  URL='https://backend-b07e.onrender.com/redessociales/';
   constructor(private http:HttpClient) { }
 
     public getRedesSociales(): Observable <redesSociales[]>{

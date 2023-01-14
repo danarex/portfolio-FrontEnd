@@ -9,7 +9,7 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  perURL='http://localhost:8080/personas/';
+  perURL='https://backend-b07e.onrender.com/personas/';
   constructor(private httpClient:HttpClient) { }
 
     public traer(): Observable <Persona[]>{

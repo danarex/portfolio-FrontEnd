@@ -7,8 +7,8 @@ import { Educacion } from '../model/educacion.model';
   providedIn: 'root'
 })
 export class EducacionService {
-  eduURL='http://localhost:8080/educacion/';
-
+  eduURL='https://backend-b07e.onrender.com/educacion/';
+  
   constructor(private httpClient:HttpClient) { }
 
     public traer(): Observable <Educacion[]>{
